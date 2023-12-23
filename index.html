@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Suitmedia</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="./js/script.js"></script> -->
+</head>
+<body>
+    <!-- Header -->
+    <nav id="header" class="fixed-header">
+        <img src="./img/logo2.png" alt="logo">
+        <ul>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#" class="active">Ideas</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- banner -->    
+    <div class="banner">
+        <div class="banner-container">
+            <img src="https://suitmedia.static-assets.id/storage/files/601/6.jpg" alt="">
+            <div class="banner-text">
+                <h1>Ideas</h1>
+                <p>Where all our great things begin</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- list post -->
+    <div class="container">
+        <div class="post-header">
+            <div class="post-count" id="itemInfo">
+                Showing <span id="showingCount">10</span> of <span id="totalCount">100</span>
+            </div>
+
+            <div class="cus">
+                <div class="controls">
+                    <label for="sort">Sort by:</label>
+                    <select name="" id="sort" onchange="sortPosts()">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                </div>
+
+                <div class="controls">
+                    <label for="perPage">Show per page:</label>
+                    <select id="perPage" onchange="showPerPage()">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <!-- Add more options based on your preference -->
+                    </select>
+                </div>
+            </div>
+        </div>
+            
+        <div class="items-container" id="itemsContainer">
+            <!-- List of posts will be dynamically added here -->
+        </div>
+    </div>
+
+    <div class="pagination">
+        <button onclick="changePage('prev')"><<</button>
+        <span id="currentPage">1</span>
+        <button onclick="changePage('next')">>></button>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
